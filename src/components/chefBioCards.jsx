@@ -8,7 +8,7 @@ const chefBioCards = ({ job }) => {
     <div>
       <div className="card card-side bg-base-100 shadow-xl">
         <figure>
-          <img className="object-contain h-48 w-45" src={picture} />
+          <img className="object-contain h-48 w-45 rounded-xl" src={picture} />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>

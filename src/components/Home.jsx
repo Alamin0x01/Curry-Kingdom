@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FeaturedJobs from "./chefBioCards";
+
 const Home = () => {
   const [ChefData, setChefData] = useState([]);
   const [data] = useState(false);
@@ -12,7 +13,7 @@ const Home = () => {
   const displayCard = data ? ChefData : ChefData.slice(0, 6);
   return (
     <div className="my-container">
-      <div className="flex flex-col items-center justify-between  lg:flex-row">
+      {/* <div className="flex flex-col items-center justify-between  lg:flex-row">
         <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0">
           <div className="max-w-xl mb-6 lg:mt-8">
             <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-7xl ">
@@ -38,7 +39,7 @@ const Home = () => {
         <div className="relative lg:w-1/2 ">
           <div className="w-full lg:w-4/5 lg:ml-auto h-56  sm:h-96"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
@@ -101,11 +102,10 @@ const Home = () => {
 
       <div className=" text-center flex flex-col items-center">
         <h1 className="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Featured Jobs
+          Top Chef: World All-Stars
         </h1>
         <p className="text-gray-400 pt-3">
-          Explore thousands of job opportunities with all the information you
-          need. Its your future
+          To be a chef you have to be very meticulous in everything you do..
         </p>
       </div>
       <div className="my-container grid md:grid-cols-1 lg:grid-cols-2 gap-4">
