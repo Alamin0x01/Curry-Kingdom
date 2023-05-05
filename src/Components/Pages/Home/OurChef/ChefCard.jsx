@@ -8,7 +8,7 @@ const ChefCard = ({ chef }) => {
   const { id, name, picture, experience_years, num_recipes, likes } = chef;
   return (
     <div className="">
-      <div className="card  w-96 mx-auto bg-rose-100 shadow-xl">
+      <div className="card  w-96 mx-auto bg-orange-100 shadow-xl">
         <figure>
           <LazyLoad
             className="LazyLoad"
@@ -31,8 +31,8 @@ const ChefCard = ({ chef }) => {
 
           <div className="card-actions justify-between items-center">
             <div className="badge h-10 badge-outline badge-info gap-2">
-              <FaHeart className="text-red-600 text-3xl"></FaHeart>
-              <span className="font-bold">{likes}</span>
+              <FaHeart className="text-red-600 text-2xl"></FaHeart>
+              <span className=" text-xl">{likes}</span>
             </div>
             <Link to={`/chefRecipes/${id}`}>
               <button className="btn btn-outline btn-info">View Recipes</button>

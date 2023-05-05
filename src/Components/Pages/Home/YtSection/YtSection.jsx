@@ -1,5 +1,4 @@
 import React from "react";
-
 const YtSection = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const YtSection = () => {
             <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               <a
                 href="#"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
               >
                 Get started
                 <svg
@@ -35,7 +34,7 @@ const YtSection = () => {
               </a>
               <a
                 href="#"
-                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-blue-500 dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-blue-500 dark:border-gray-700 dark:hover:bg-red-50 dark:focus:ring-gray-800"
               >
                 Learn more
               </a>

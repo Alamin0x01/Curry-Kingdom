@@ -67,7 +67,7 @@ const Register = () => {
   };
 
   return (
-    <div className="relative flex bg-cyan-200 flex-col justify-center  overflow-hidden">
+    <div className="relative flex bg-cyan-50 flex-col justify-center  overflow-hidden">
       <div className="w-full mt-5 mb-5 p-6 m-auto bg-cyan-100 rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-black-700 uppercase">
           Please Register
