@@ -1,14 +1,14 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Header from "./Header/Header";
 import OurChef from "./OurChef/OurChef";
-import Statistics from "./Statistics/Statistics";
+import YtSection from "./YtSection/YtSection";
 
 const Home = () => {
   return (
     <div>
       <Header></Header>
       <OurChef></OurChef>
-      <Statistics></Statistics>
+      <YtSection />
     </div>
   );
 };

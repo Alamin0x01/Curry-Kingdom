@@ -6,7 +6,7 @@ const Footer = () => {
   };
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content ">
+      <footer className="footer p-10 dark:bg-blue-100 text-base-content  ">
         <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Foods</a>

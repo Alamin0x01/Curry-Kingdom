@@ -23,7 +23,7 @@ const Blog = () => {
         </ReactToPdf>
       </div>
       <div ref={ref}>
-        <div className="mt-5 mb-36 mx-10 text-orange-400 border-2 bg-orange-50  border-orange-400 rounded p-5">
+        <div className="mt-5 mb-7 mx-10 text-sky-500 border-2 bg-blue-100  border-green-400 rounded p-5">
           <div>
             <h3 className="text-3xl font-semibold p-3">
               Q: Tell us the differences between uncontrolled and controlled
@@ -69,6 +69,20 @@ const Blog = () => {
               Developers create custom hooks to reduce code duplication and
               improve code readability and maintainability.
             </p>
+          </div>
+        </div>
+      </div>
+      <div class=" bg-white flex space-x-12 p-12 justify-center items-center">
+        <div class="  rounded-md p-4  w-full mx-auto">
+          <div class="animate-pulse flex space-x-4">
+            <div class="rounded-full bg-blue-400 h-12 w-12"></div>
+            <div class="flex-1 space-y-4 py-1">
+              <div class="h-4 bg-blue-400 rounded w-3/4"></div>
+              <div class="space-y-2">
+                <div class="h-4 bg-blue-400 rounded"></div>
+                <div class="h-4 bg-blue-400 rounded w-5/6"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
