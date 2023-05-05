@@ -3,24 +3,25 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div className="py-10">
-      <div className="text-center">
-        <p className="text-primary">404</p>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-5xl">
-          Page not found
-        </h1>
-        <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-400">
-          Sorry, we couldn't find the page you're looking for.
-        </p>
-        <div className="flex items-center justify-center mt-6 gap-x-3">
-          <Link to="/">
-            <button className=" btn btn-primary ">
-              Go Home
-            </button>
+    <section>
+      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+        <div className="max-w-md text-center ">
+          <img
+            className=" mb-7"
+            src="https://t3.ftcdn.net/jpg/01/99/49/18/360_F_199491843_Lk3SoVIVM2m3wPrI3jkVwJVEP60neEsp.jpg"
+            alt=""
+            srcset=""
+          />
+
+          <Link
+            to="/"
+            className="px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900"
+          >
+            Back to homepage
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -13,38 +13,40 @@ const Recipes = () => {
 
   return (
     <div>
-      <div className="w-8/12 mx-auto text-center">
-        <div className="w-64 h-64 rounded-full overflow-hidden mx-auto my-4">
+      <div className="flex mt-10 ">
+        <div className=" mask mask-squircle">
           <img
             className="w-full h-full object-cover"
-            src={chef?.chefPicture}
+            src={chef?.picture}
             alt="chef image"
           />
         </div>
-        <div className="w-6/12 mx-auto mb-10">
-          <h2 className="text-5xl my-9 font-bold">{chef?.chefName}</h2>
+        <div className="w-6/12 ml-2">
+          <h2 className="text-5xl my-9 font-bold">{chef?.name}</h2>
           <p>
-            <span className="font-bold">About: </span>
-            {chef?.chefBio}
+            <span className="font-bold">About : </span>
+            {chef?.bio}
           </p>
-          <p className="font-semibold mt-4">
-            I have <span className="font-bold">{chef?.numberOfRecipes}</span>{" "}
-            recipes
-          </p>
-          <p className="font-semibold">
-            My Experience in this profession{" "}
-            <span className="font-bold"> {chef?.yearsOfExperience}</span> years
-          </p>
+          <li className="font-semibold mt-4">
+            Recipes : <span className="font-bold">{chef?.num_recipes}</span>{" "}
+          </li>
+          <li className="font-semibold">
+            Experience :
+            <span className="font-bold"> {chef?.experience_years}</span> years
+          </li>
         </div>
       </div>
-      <hr />
+
+      {/* <hr /> */}
       <div>
-        <h2 className="font-bold text-4xl text-center my-10 ">My Recipes</h2>
-       <div className="grid grid-cols-2 gap-10 mx-auto w-10/12">
-       {chefRecipes.map((recipe) => (
-          <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard>
-        ))}
-       </div>
+        <h2 className="font-bold text-4xl text-center my-10 ">
+          My Top Recipes
+        </h2>
+        <div className="grid grid-cols-2 gap-10 mx-auto w-10/12">
+          {/* {chefRecipes.map((recipe) => (
+            <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>
+          ))} */}
+        </div>
       </div>
     </div>
   );

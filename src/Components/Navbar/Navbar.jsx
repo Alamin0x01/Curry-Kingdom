@@ -9,7 +9,6 @@ const Navbar = () => {
     handleSignout();
   };
 
-
   return (
     <div>
       <div className="navbar text-black shadow">
@@ -36,44 +35,32 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to="/"  >
-                  Home
-                </NavLink>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/blog"  >
-                  Blog
-                </NavLink>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
               <li>
-                <NavLink to="#"  >
-                  Contact
-                </NavLink>
+                <NavLink to="#">Contact</NavLink>
               </li>
             </ul>
           </div>
           <Link to="/">
             <h2 className="md:text-3xl text-lg font-bold text-primary md:ml-10">
-              Flavour Fusion
+              Curry Kingdom
             </h2>
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-10">
             <li className="">
-              <NavLink to="/"  >
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/blog"  >
-                Blog
-              </NavLink>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
             <li>
-              <NavLink to="/contact"  >
-                Contact
-              </NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
@@ -82,7 +69,8 @@ const Navbar = () => {
             {user ? (
               <>
                 {user.photoURL && (
-                  <img title={user.displayName}
+                  <img
+                    title={user.displayName}
                     className="h-12 rounded-full border-2 border-primary"
                     src={user?.photoURL}
                     alt=""

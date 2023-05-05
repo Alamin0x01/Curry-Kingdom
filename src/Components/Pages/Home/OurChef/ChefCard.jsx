@@ -1,23 +1,14 @@
 import React, { createContext, useState } from "react";
-import { FaThumbsUp } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyLoad from "react-lazy-load";
 
 const ChefCard = ({ chef }) => {
-  const {
-    id,
-    chefName,
-    chefPicture,
-    yearsOfExperience,
-    numberOfRecipes,
-    likes,
-    chefBio,
-  } = chef;
+  const { id, name, picture, experience_years, num_recipes, likes } = chef;
   return (
-    <>
-      <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+    <div className="bg-base-100">
+      <div className="card glass w-96 mx-auto bg-cyan-100 shadow-xl">
         <figure>
           <LazyLoad
             className="LazyLoad"
@@ -26,31 +17,30 @@ const ChefCard = ({ chef }) => {
             offset={300}
             threshold={0.75}
           >
-            <img className="h-58" src={chefPicture} alt="Chef" />
+            <img className="h-58" src={picture} alt="Chef" />
           </LazyLoad>
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{chefName}</h2>
+          <h2 className="card-title">{name}</h2>
           <p>
-            Experience: <span>{yearsOfExperience}</span>
+            Experience: <span>{experience_years}</span>
           </p>
           <p>
-            Number of Recipes: <span>{numberOfRecipes}</span>
+            Number of Recipes: <span>{num_recipes}</span>
           </p>
 
           <div className="card-actions justify-between items-center">
-            <Link to={`/chefRecipes/${id}`}>
-              <button className="btn btn-primary">View Recipes</button>
-            </Link>
-
-            <div className="badge badge-outline gap-2">
-              <FaThumbsUp></FaThumbsUp>
-              <span>{likes}</span>
+            <div className="badge h-10 badge-outline gap-2">
+              <FaHeart className="text-red-600 text-3xl"></FaHeart>
+              <span className="font-bold">{likes}</span>
             </div>
+            <Link to={`/chefRecipes/${id}`}>
+              <button className="btn btn-outline btn-info">View Recipes</button>
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

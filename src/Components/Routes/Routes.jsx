@@ -14,22 +14,25 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
         // loader: () =>fetch('https://flavour-fusion-server-siam-wd.vercel.app/chefs')
-        
+
         loader: async () => {
           try {
-            const slideData = await fetch('https://flavour-fusion-server-siam-wd.vercel.app/slides');
+            const slideData = await fetch(
+              "https://flavour-fusion-server-siam-wd.vercel.app/slides"
+            );
             const slides = await slideData.json();
 
-            const chefsData = await fetch('https://flavour-fusion-server-siam-wd.vercel.app/chefs');
+            const chefsData = await fetch(
+              "https://chef-recipe-hunter-server-side-snowy.vercel.app/chefs"
+            );
             const chefs = await chefsData.json();
-    
-    
+
             return {
               slides: slides,
               chefs: chefs,
@@ -37,8 +40,7 @@ const router = createBrowserRouter([
           } catch (err) {
             console.log(err);
           }
-        }
-
+        },
       },
       {
         path: "/login",
@@ -51,7 +53,6 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
-       
       },
       {
         path: "/contact",
@@ -63,9 +64,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/chefRecipes/:id",
-        element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
-        loader: ({params})=>fetch(`https://flavour-fusion-server-siam-wd.vercel.app/recipes/${params.id}`)
-      }
+        element: (
+          <PrivateRoute>
+            <Recipes></Recipes>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://chef-recipe-hunter-server-side-snowy.vercel.app/chefs/${params.id}`
+          ),
+      },
     ],
   },
 ]);

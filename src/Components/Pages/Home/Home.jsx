@@ -2,8 +2,7 @@ import React, { Suspense } from "react";
 import Header from "./Header/Header";
 import OurChef from "./OurChef/OurChef";
 import Statistics from "./Statistics/Statistics";
-import Feedback from "./Feedback/Feedback";
-
+// import Feedback from "./Feedback/Feedback";
 
 const Home = () => {
   return (
@@ -11,7 +10,7 @@ const Home = () => {
       <Header></Header>
       <OurChef></OurChef>
       <Statistics></Statistics>
-      <Feedback></Feedback>
+      {/* <Feedback></Feedback> */}
     </div>
   );
 };
