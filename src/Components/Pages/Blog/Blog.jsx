@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { FaDownload } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
 import ReactToPdf from "react-to-pdf";
 const Blog = () => {
   const ref = useRef();

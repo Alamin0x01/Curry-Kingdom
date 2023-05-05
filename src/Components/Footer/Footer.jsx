@@ -1,9 +1,6 @@
 import React from "react";
 
 const Footer = () => {
-  const handleSubscribe = (event) => {
-    event.preventDefault();
-  };
   return (
     <div>
       <footer className="footer p-10 dark:bg-blue-100 text-base-content  ">

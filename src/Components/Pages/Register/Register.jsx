@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
@@ -60,8 +60,6 @@ const Register = () => {
         toast.success("User has created successfully!");
       })
       .catch((error) => setError(error.message));
-
-    
   };
 
   const handleCheckboxChange = (event) => {
