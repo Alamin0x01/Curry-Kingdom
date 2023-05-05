@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../../Providers/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { user, handleLogin, handleGoogleSignin, handleGithubSignin  } = useContext(AuthContext);
+  const { user, handleLogin, handleGoogleSignin, handleGithubSignin } =
+    useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -52,7 +52,6 @@ const Login = () => {
         navigate(from, { replace: true });
         setSuccess("User Login successfully");
         toast.success("User Login successfully");
-
       })
       .catch((error) => {
         setError(error.message);
@@ -60,8 +59,8 @@ const Login = () => {
   };
 
   return (
-    <div className="relative mt-5 flex flex-col justify-center  min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
+    <div className="relative  flex flex-col justify-center bg-cyan-200 min-h-screen overflow-hidden">
+      <div className="w-full p-6 m-auto bg-cyan-100 rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-black-700 uppercase">
           Sign in
         </h1>
@@ -85,12 +84,12 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               required
               className="block w-full px-4 py-2 mt-2 text-orange-700 bg-white border rounded-md focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
-          <Link to="#" className="text-xs text-orange-600 hover:underline">
+          <Link to="#" className="text-xs  text-orange-600 hover:underline">
             Forget Password?
           </Link>
           <div className="mt-6">
@@ -100,7 +99,7 @@ const Login = () => {
           </div>
         </form>
         <div className="relative flex items-center justify-center w-full mt-6 border border-t">
-          <div className="absolute px-5 bg-white">Or</div>
+          <div className="absolute px-5 ">Or</div>
         </div>
         <div className="flex mt-4 gap-x-2">
           <button
@@ -108,10 +107,13 @@ const Login = () => {
             type="button"
             className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-orange-600"
           >
-            <FaGoogle></FaGoogle>
+            <FaGoogle className="text-sky-700 text-xl"></FaGoogle>
           </button>
-          <button onClick={handleGithubLogin} className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-orange-600">
-            <FaGithub></FaGithub>
+          <button
+            onClick={handleGithubLogin}
+            className="  flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-orange-600"
+          >
+            <FaGithub className="text-sky-700 text-xl"></FaGithub>
           </button>
         </div>
 

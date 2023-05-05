@@ -67,8 +67,8 @@ const Register = () => {
   };
 
   return (
-    <div className="relative mt-5 flex flex-col justify-center  overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
+    <div className="relative flex bg-cyan-200 flex-col justify-center  overflow-hidden">
+      <div className="w-full mt-5 mb-5 p-6 m-auto bg-cyan-100 rounded-md shadow-xl lg:max-w-xl">
         <h1 className="text-3xl font-semibold text-center text-black-700 uppercase">
           Please Register
         </h1>
@@ -115,7 +115,7 @@ const Register = () => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               required
               className="block w-full px-4 py-2 mt-2 text-orange-700 bg-white border rounded-md focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
