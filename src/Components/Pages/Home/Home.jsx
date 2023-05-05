@@ -5,7 +5,7 @@ import YtSection from "./YtSection/YtSection";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-cyan-50">
       <Header></Header>
       <OurChef></OurChef>
       <YtSection />

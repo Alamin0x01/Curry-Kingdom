@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-
 import "react-toastify/dist/ReactToastify.css";
-
 import { toast } from "react-toastify";
 import { Rating } from "@smastrom/react-rating";
-
 import "@smastrom/react-rating/style.css";
 
 const Recipes = () => {
   const [isDisabled, setIsDisabled] = useState(false);
-
   const chef = useLoaderData();
-
   const handleFavourite = () => {
     toast.success("Added to favourite!");
     setIsDisabled(true);
   };
 
   return (
-    <div className="mb-24">
-      <div className="flex mt-10 ">
+    <div className=" bg-cyan-50">
+      <div className="flex  ">
         <div className=" mask mask-squircle">
           <img
             className="w-full h-full object-cover"
@@ -29,7 +24,9 @@ const Recipes = () => {
           />
         </div>
         <div className="w-6/12 ml-2">
-          <h2 className="text-5xl my-9 font-bold">{chef?.name}</h2>
+          <h2 className="text-5xl my-9 text-cyan-700 font-bold">
+            {chef?.name}
+          </h2>
           <p>
             <span className="font-bold">About : </span>
             {chef?.bio}
@@ -45,9 +42,11 @@ const Recipes = () => {
       </div>
 
       <div>
-        <h2 className="font-bold text-4xl text-center my-10 ">Top Recipes</h2>
+        <h2 className="font-bold text-4xl text-center my-10 text-cyan-500 animate-bounce ">
+          Top Recipes
+        </h2>
         <div className="grid grid-cols-3 gap-10 mx-auto w-10/12">
-          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+          <div className="card card-compact  bg-orange-100 overflow-hidden shadow-xl">
             <figure>
               <img
                 className="h-80 w-full object-cover"
@@ -76,7 +75,7 @@ const Recipes = () => {
               </div>
             </div>
           </div>
-          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+          <div className="card card-compact  bg-orange-100 overflow-hidden shadow-xl">
             <figure>
               <img
                 className="h-80 w-full object-cover"
@@ -105,7 +104,7 @@ const Recipes = () => {
               </div>
             </div>
           </div>
-          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+          <div className="card card-compact  bg-orange-100 overflow-hidden shadow-xl">
             <figure>
               <img
                 className="h-80 w-full object-cover"

@@ -7,8 +7,8 @@ import LazyLoad from "react-lazy-load";
 const ChefCard = ({ chef }) => {
   const { id, name, picture, experience_years, num_recipes, likes } = chef;
   return (
-    <div className="bg-base-100">
-      <div className="card glass w-96 mx-auto bg-cyan-100 shadow-xl">
+    <div className="">
+      <div className="card  w-96 mx-auto bg-rose-100 shadow-xl">
         <figure>
           <LazyLoad
             className="LazyLoad"

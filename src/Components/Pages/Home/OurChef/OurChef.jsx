@@ -6,7 +6,7 @@ const OurChef = () => {
   const { chefs } = useLoaderData();
 
   return (
-    <div className="md:mx-10 w-full">
+    <div className="md:mx-10 w-full ">
       <h2 className="tracking-tight text-cyan-700 md:text-3xl text-xl mt-10 text-center font-bold">
         Top Chef: World All-Stars
       </h2>

@@ -10,19 +10,9 @@ const Blog = () => {
   };
 
   return (
-    <div>
-      <div className="mt-6 animate-bounce text-end mr-6">
-        <ReactToPdf targetRef={ref} options={options} filename="blog.pdf">
-          {({ toPdf }) => (
-            <button className="btn btn-info " onClick={toPdf}>
-              <FaDownload className="inline-block mr-2 text-white"></FaDownload>{" "}
-              Download Pdf
-            </button>
-          )}
-        </ReactToPdf>
-      </div>
+    <div className="bg-cyan-50">
       <div ref={ref}>
-        <div className="mt-5 mb-7 mx-10 text-sky-500 border-2 bg-blue-100  border-green-400 rounded p-5">
+        <div className="  mx-10 text-sky-500  bg-blue-50   rounded p-5">
           <div>
             <h3 className="text-3xl font-semibold p-3">
               Q: Tell us the differences between uncontrolled and controlled
@@ -71,19 +61,15 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      <div class=" bg-white flex space-x-12 p-12 justify-center items-center">
-        <div class="  rounded-md p-4  w-full mx-auto">
-          <div class="animate-pulse flex space-x-4">
-            <div class="rounded-full bg-blue-400 h-12 w-12"></div>
-            <div class="flex-1 space-y-4 py-1">
-              <div class="h-4 bg-blue-400 rounded w-3/4"></div>
-              <div class="space-y-2">
-                <div class="h-4 bg-blue-400 rounded"></div>
-                <div class="h-4 bg-blue-400 rounded w-5/6"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="bg-cyan-50 animate-bounce text-center mr-6 ">
+        <ReactToPdf targetRef={ref} options={options} filename="blog.pdf">
+          {({ toPdf }) => (
+            <button className="btn btn-info " onClick={toPdf}>
+              <FaDownload className="inline-block mr-2 text-white"></FaDownload>{" "}
+              Download Pdf
+            </button>
+          )}
+        </ReactToPdf>
       </div>
     </div>
   );
