@@ -30,7 +30,7 @@ const ChefCard = ({ chef }) => {
           </p>
 
           <div className="card-actions justify-between items-center">
-            <div className="badge h-10 badge-outline gap-2">
+            <div className="badge h-10 badge-outline badge-info gap-2">
               <FaHeart className="text-red-600 text-3xl"></FaHeart>
               <span className="font-bold">{likes}</span>
             </div>

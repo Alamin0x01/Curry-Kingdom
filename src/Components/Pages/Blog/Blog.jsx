@@ -12,10 +12,10 @@ const Blog = () => {
 
   return (
     <div>
-      <div className="mt-6 text-end mr-6">
+      <div className="mt-6 animate-bounce text-end mr-6">
         <ReactToPdf targetRef={ref} options={options} filename="blog.pdf">
           {({ toPdf }) => (
-            <button className="btn btn-success " onClick={toPdf}>
+            <button className="btn btn-info " onClick={toPdf}>
               <FaDownload className="inline-block mr-2 text-white"></FaDownload>{" "}
               Download Pdf
             </button>
@@ -23,7 +23,7 @@ const Blog = () => {
         </ReactToPdf>
       </div>
       <div ref={ref}>
-        <div className="mt-12 mx-10 text-orange-400 border-2 bg-orange-50  border-orange-400 rounded p-5">
+        <div className="mt-5 mb-36 mx-10 text-orange-400 border-2 bg-orange-50  border-orange-400 rounded p-5">
           <div>
             <h3 className="text-3xl font-semibold p-3">
               Q: Tell us the differences between uncontrolled and controlled

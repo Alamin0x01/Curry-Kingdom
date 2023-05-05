@@ -1,18 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import RecipeCard from "./RecipeCard";
+
 import "react-toastify/dist/ReactToastify.css";
 
+import { toast } from "react-toastify";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
+
 const Recipes = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const chef = useLoaderData();
-  const chefRecipes = chef.recipes;
+
+  const handleFavourite = () => {
+    toast.success("Added to favourite!");
+    setIsDisabled(true);
+  };
 
   return (
-    <div>
+    <div className="mb-24">
       <div className="flex mt-10 ">
         <div className=" mask mask-squircle">
           <img
@@ -37,15 +44,96 @@ const Recipes = () => {
         </div>
       </div>
 
-      {/* <hr /> */}
       <div>
-        <h2 className="font-bold text-4xl text-center my-10 ">
-          My Top Recipes
-        </h2>
-        <div className="grid grid-cols-2 gap-10 mx-auto w-10/12">
-          {/* {chefRecipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>
-          ))} */}
+        <h2 className="font-bold text-4xl text-center my-10 ">Top Recipes</h2>
+        <div className="grid grid-cols-3 gap-10 mx-auto w-10/12">
+          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+            <figure>
+              <img
+                className="h-80 w-full object-cover"
+                src={chef.recipes_}
+                alt="recipe"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title  text-2xl">{chef.recipes}</h2>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati, a.
+              </h1>
+              <div className="card-actions justify-center mt-5">
+                <div className="mr-5 flex items-center my-auto ">
+                  <h1 className="font-bold text-xl mr-3">Rating: 5</h1>
+                  <Rating style={{ maxWidth: 100 }} readOnly></Rating>
+                </div>
+                <button
+                  onClick={handleFavourite}
+                  disabled={isDisabled}
+                  className="btn btn-primary"
+                >
+                  Favourite
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+            <figure>
+              <img
+                className="h-80 w-full object-cover"
+                src={chef.recipes1_pic}
+                alt="recipe"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title  text-2xl">{chef.recipes1}</h2>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati, a.
+              </h1>
+              <div className="card-actions justify-center mt-5">
+                <div className="mr-5 flex items-center my-auto ">
+                  <h1 className="font-bold text-xl mr-3">Rating: 5</h1>
+                  <Rating style={{ maxWidth: 100 }} readOnly></Rating>
+                </div>
+                <button
+                  onClick={handleFavourite}
+                  disabled={isDisabled}
+                  className="btn btn-primary"
+                >
+                  Favourite
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card card-compact  bg-base-100 overflow-hidden shadow-xl">
+            <figure>
+              <img
+                className="h-80 w-full object-cover"
+                src={chef.recipes2_pic1}
+                alt="recipe"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title  text-2xl">{chef.recipes2}</h2>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati, a.
+              </h1>
+              <div className="card-actions justify-center mt-5">
+                <div className="mr-5 flex items-center my-auto ">
+                  <h1 className="font-bold text-xl mr-3">Rating: 5</h1>
+                  <Rating style={{ maxWidth: 100 }} readOnly></Rating>
+                </div>
+                <button
+                  onClick={handleFavourite}
+                  disabled={isDisabled}
+                  className="btn btn-primary"
+                >
+                  Favourite
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

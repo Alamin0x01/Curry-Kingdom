@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import "./Navber.css";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
@@ -46,12 +46,12 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <h2 className="md:text-3xl text-lg font-bold text-primary md:ml-10">
-              Curry Kingdom
+            <h2 className="  md:text-3xl text-lg font-bold md:ml-10">
+              Curry <span className=" text-cyan-500">Kingdom</span>
             </h2>
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-center mr-96 hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-10">
             <li className="">
               <NavLink to="/">Home</NavLink>
@@ -71,18 +71,23 @@ const Navbar = () => {
                 {user.photoURL && (
                   <img
                     title={user.displayName}
-                    className="h-12 rounded-full border-2 border-primary"
+                    className="w-14 h-14 rounded-full border-2 border-sky-400"
                     src={user?.photoURL}
                     alt=""
                   />
                 )}
-                <button onClick={handleLogout} className="ml-5 btn btn-primary">
+                <button
+                  onClick={handleLogout}
+                  className="ml-5 border-none btn text-white bg-gradient-to-r from-cyan-300 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-600 font-medium  text-sm  text-center "
+                >
                   Logout
                 </button>
               </>
             ) : (
               <Link to="/login">
-                <button className="btn btn-primary">Login</button>
+                <button className="ml-5 border-none btn text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  text-sm  text-center">
+                  Login
+                </button>
               </Link>
             )}
           </>

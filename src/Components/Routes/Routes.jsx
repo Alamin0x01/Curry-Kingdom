@@ -19,7 +19,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        // loader: () =>fetch('https://flavour-fusion-server-siam-wd.vercel.app/chefs')
 
         loader: async () => {
           try {
