@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         loader: async () => {
           try {
             const slideData = await fetch(
-              "https://flavour-fusion-server-siam-wd.vercel.app/slides"
+              "https://chef-recipe-hunter-server-side-snowy.vercel.app/slides"
             );
             const slides = await slideData.json();
 

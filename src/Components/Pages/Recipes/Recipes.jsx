@@ -58,8 +58,8 @@ const Recipes = () => {
             <div className="card-body">
               <h2 className="card-title  text-2xl">{chef.recipes}</h2>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, a.
+                To keep garlic from going rancid, always store it at room
+                temperature.
               </h1>
               <div className="card-actions justify-center mt-5">
                 <div className="mr-5 flex items-center my-auto ">
@@ -87,8 +87,8 @@ const Recipes = () => {
             <div className="card-body">
               <h2 className="card-title  text-2xl">{chef.recipes1}</h2>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, a.
+                Soften hard brown sugar by placing a piece of dry bread in the
+                bag overnight.
               </h1>
               <div className="card-actions justify-center mt-5">
                 <div className="mr-5 flex items-center my-auto ">
@@ -116,8 +116,8 @@ const Recipes = () => {
             <div className="card-body">
               <h2 className="card-title  text-2xl">{chef.recipes2}</h2>
               <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati, a.
+                Recipes are only a guideline. Feel free to substitute items that
+                cater to your personal preferences.
               </h1>
               <div className="card-actions justify-center mt-5">
                 <div className="mr-5 flex items-center my-auto ">
