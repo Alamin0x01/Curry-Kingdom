@@ -28,6 +28,6 @@ Hosted in Firebase: https://chef-recipe-hunter-client-side.web.app/
 
 ## Complete Project 💫
 
-- Github Repo -> [Clint-Side](https://github.com/Alamin0x01/Curry-Kingdom)
+- Github Repo -> [Client-Side](https://github.com/Alamin0x01/Curry-Kingdom)
 
 - Github Repo -> [Server-Side](https://github.com/Alamin0x01/Curry-Kingdom-Server)
